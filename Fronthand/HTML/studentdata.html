@@ -1,0 +1,76 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <script src ="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.5/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/addons/p5.dom.js"></script>
+    <!-- <script src="https://www.gstatic.com/firebasejs/3.6.5/firebase.js"></script> -->
+    <script language="javascript" type="text/javascript" src="libraries/p5.js"></script>
+    <!-- <script language="javascript" src="libraries/p5.dom.js"></script> -->
+    <!-- <script language="javascript" src="libraries/p5.sound.js"></script> -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+  
+    
+
+ <style>
+body {
+            padding: 0;
+            margin: 0;
+        }
+        #orders{
+border:2px solid rgb(224, 15, 15); 
+}
+th{
+border: 1px solid black;
+border-left:none;
+border-right:none;
+}
+#signOut{
+      background-color: #ff4d4d;
+      color: white;
+      border: none;
+      font-weight: bold;
+      padding: 15px 32px;
+      border-radius: 10px;
+      text-align: center;
+      text-decoration : none;
+      display: inline-block;
+      font-size: 13px;
+      float: right;
+     }
+    </style>
+</head>
+<!-- <script type="text/javascript" src="../JS/main.js"></script> -->
+<body class="verifire">
+    <table id ="orders" style ="width:70%">
+        <tr id="tr">
+          <th>Student-Data</th>
+          
+        </tr>
+    </table>
+    <!-- <body class="verifier"> -->
+        <div id="user_div">
+          <div id="header"> </div>
+          <!-- <button onclick="logout()">Logout</button> -->
+          <button onclick="signOut()" id="signOut" type="signOut" class="btn1">Sign out</button>
+          <!-- <button onclick="signOut()">Sign/</button> -->
+      </div>
+    <!-- <div id="game">
+    </div> -->
+    <p>
+        <ol id="scorelist">
+        </ol>
+    </p>
+   
+    <script language="javascript" type="text/javascript" src="../JS/sketch.js"></script>
+
+
+    <!-- <script language="javascript" type="text/javascript" src="../JS/main.js"></script> -->
+</body>
+
+</html>

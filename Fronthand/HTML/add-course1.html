@@ -1,0 +1,187 @@
+<html>
+<head></head>
+<style>
+  h5{
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+  }
+  #addCourseModal {
+    background-color: rgb(65, 247, 10);
+  }
+  #cancelModalBtn{
+    background-color: #f808d0;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 15px 32px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration : none;
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-left: 54px;
+  }
+  #addCourseModalBtn{
+    background-color: #fd05fd;
+    /* float: right; */
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 15px 32px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration : none;
+    display: inline-block;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-left: 54px;
+  }
+  .form-group{
+    margin:5px;
+  }
+  </style>
+<body style="padding: 10%; background-color: rgb(65, 247, 10);">
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-analytics.js"></script>
+<script>
+
+function myFunction() {
+    alert("Data submited");
+}
+</script>
+      <div>
+        <h5><b>Add Course</b></h5>
+      </div>
+      <hr/>
+      <div>
+        <form id="addCourseForm"  name="addCourseForm">
+              <div class="form-group">
+                <label><b>Id-NO:-</b></label>
+                <input
+                  type="text"
+                  id="id-no"
+                  placeholder="19it036"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label><b>FIRST NAME:-</b></label>
+                <input
+                  type="text"
+                  id="first-name"
+                  placeholder="first name"
+                />
+              </div>
+              <div class="form-group">
+                <label><b>LAST NAME:-</b></label>
+                <input
+                  type="text"
+                  id="last-name"
+                  placeholder="last name"
+                />
+              </div>
+              <div class="form-group">
+                <label><b>EMAIL:-</b></label>
+                <input
+                  type="text"
+                  id="emails"
+                  placeholder="email"
+                />
+              </div>
+              <div class="form-group">
+                <label><b>COLLEGE:-</b></label>
+                <select id="collages">
+                  <option disabled selected hidden>Choose Deparment...</option>
+                  <option value="Chandubhai S patel institute of technology">Chandubhai S patel institute of technology</option>
+                  <option value="Indukaka Ipcowala Institute Of Management">Indukaka Ipcowala Institute Of Management</option>
+                  <option value="Ramanbhai Patel College Of Pharmacy">Ramanbhai Patel College Of Pharmacy</option>
+                  <option value="Devang Patel Institute of Advance Technology And Research">Devang Patel Institute of Advance Technology And Research</option>
+                  <option value="Smt. Chandaben Mohanbhai Patel Institute of computer application">Smt. Chandaben Mohanbhai Patel Institute of computer application</option>
+                  <option value="Charotar Institute of Paramedical Sciences">Charotar Institute of Paramedical Sciences</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label><b>COURSE:-</b></label>
+                <select id="courses">
+                  <option disabled selected hidden>Choose course...</option>
+                  <option value="B.Tech">B.Tech</option>
+                  <option value="MBA">MBA</option>
+                  <option value="M.Tech">M.Tech</option>
+                  <option value="BBA">BBA</option>
+                  <option value="M.Sc">M.Sc</option>
+                  <option value="B.Sc">B.Sc</option>
+                  <option value="Ph.D.">Ph.D.</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label><b>BRANCH:-</b></label>
+                <select id="branches">
+                  <option disabled selected hidden>Choose Branch...</option>
+                  <option value="Information Technology">Information Technology</option>
+                  <option value="Computer Science and Engineering">Computer Science and Engineering</option>
+                  <option value="Computer Engineering">Computer Engineering</option>
+                  <option value="Electrical Engineering">Electrical Engineering</option>
+                  <option value="Mechanical Engineering">Mechanical Engineering</option>
+                  <option value="Civil Engineering">Civil Engineering</option>
+                  <option value="Medical Laboratory Technology">Medical Laboratory Technology</option>
+                  <option value="Nursing">Nursing</option>
+                  <option value="Pharmacy">Pharmacy</option>
+                  <option value="Biochemistry">Biochemistry</option>
+                  <option value="Biotechnology">Biotechnology</option>
+                  <option value="Microbiology"> Microbiology</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label><b>SEMESTER:-</b></label>
+                <input
+                  type="number"
+                  id="noOfSemesters"
+                  placeholder="8"
+                />
+              </div>
+              <div class="form-group">
+                <label><b>Total Credits</b></label>
+                <input
+                  type="number"
+                  id="credits"
+                  placeholder="240"
+                />
+              </div>
+              <div class="form-group">
+                <label><b>SGPA:-</b></label>
+                <input
+                  type="text"
+                  id="sgpa-input"
+                  placeholder="10.00"
+                />
+              </div>
+              <div class="form-group">
+                <label><b>CGPA:-</b></label>
+                <input
+                  type="text"
+                  id="cgpa-input"
+                  placeholder="10.00"
+                />
+              </div>
+              <button
+              type="button"
+              class="btn"
+              id="cancelModalBtn"
+            >
+              Cancel
+            </button>
+            <button
+            type="submit"
+            class="btn"
+            id="addCourseModalBtn"
+            >
+              Add Course
+            </button>
+          </form>       
+      </div>
+      <script src="../JS/add-course1.js"></script>
+</body>
+</html>

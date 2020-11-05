@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+<script src="../JS/main.js"></script>
+</head>
+<style >
+  #signOut{
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  font-weight: bold;
+  padding: 15px 32px;
+  border-radius: 10px;
+  text-align: center;
+  text-decoration : none;
+  display: inline-block;
+  font-size: 13px;
+  float: right;
+ }
+</style>
+  <body>
+      <button onclick="signOut()" id="signOut" type="signOut" class="btn1">Sign out</button>
+          <h1 id="studentNo"></h1>
+          <hr/>
+            <table style="width:100%">
+                <tr>
+                  <th>Grade ID</th>
+                  <th>Stage</th>
+                  <th>Semester</th>
+                  <th>CRN</th>
+                  <th>Subject</th>
+                  <th>Course</th>
+                  <th>Title</th>
+                  <th>Credits Earned</th>
+                  <td>Final Grade</td>
+                </tr>
+            </table>
+  </body>
+</html>

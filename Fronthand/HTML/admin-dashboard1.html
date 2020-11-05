@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-auth.js"></script>
+<script src="../js/main.js"></script>
+</head>
+<style>
+  .admin{
+    background-color: aqua;
+  }
+  
+  /* #nav-tab{
+    background-color: rgb(255, 0, 234);
+  } */
+  
+  #signOut{
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 15px 32px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration : none;
+    display: inline-block;
+    font-size: 13px;
+    float: right;
+   }
+  
+   #addCourseBtn{
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: 10px 32px;
+    border-radius: 15px;
+    text-align: center;
+    text-decoration : none;
+    display: inline-block;
+    font-size: 13px;
+    /* float: right; */
+    position: absolute;
+    left: 250px;
+    top: 83px;
+   }
+  </style>
+<body class="admin">
+ <div id="user_div">
+      <div id="header"> </div>
+      <!-- <button onclick="logout()">Logout</button> -->
+      <button onclick="signOut()" id="signOut" type="signOut" class="btn1">Sign out</button>
+  </div>
+        <div class="col">
+          <h1>Admin Dashboard</h1>
+          <hr />
+        </div>
+      <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+          <label style="align-self:inherit;">ID-NO:-</label>
+         <input type="text" placeholder="19it036"/>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="add-course1.html" id="addCourseBtn">Add Course</a>
+          </div>  
+        </div>
+      </nav>
+      <hr/>
+</body>
+</html>
