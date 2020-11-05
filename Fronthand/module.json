@@ -1,0 +1,17 @@
+{
+    "module" : [
+    {
+        "id":"19it036", 
+        "firstname":"Raj", 
+        "lastname":"Gajera", 
+        "email":"r.c.gajera.rg@gmail.com", 
+        "collage":"cspit", 
+        "course":"ce", 
+        "branch":"IT", 
+        "semester":"3", 
+        "credits":"10",
+        "sgpa":"10",
+        "cgpa":"10"
+    }
+    ]
+}
